@@ -1,5 +1,5 @@
+from sqlalchemy import Column, ForeignKey, String, BIGINT
 from src.models.sqlite.settings.base import Base
-from sqlalchemy import Column, ForeignKey, Integer, String, BIGINT
 
 class PeopleTable(Base):
     __tablename__ = "pets"
