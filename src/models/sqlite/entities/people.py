@@ -2,8 +2,7 @@ from sqlalchemy import Column, ForeignKey, String, BIGINT
 from src.models.sqlite.settings.base import Base
 
 class PeopleTable(Base):
-    __tablename__ = "pets"
-
+    __tablename__ = "people"
     id = Column(BIGINT, primary_key=True)
     first_name = Column(String, nullable=False)
     last_name = Column(String, nullable=False)

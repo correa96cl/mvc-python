@@ -26,4 +26,10 @@ def test_insert_person():
     repo = PeopleRepository(db_connection_handler)
     repo.insert_person(first_name, last_name, age, pet_id)
 
+def test_get_person():
+    person_id = 1
+    repo = PeopleRepository(db_connection_handler)
+    response = repo.get_person(person_id)
+    print(response)
+
 
