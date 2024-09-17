@@ -1,5 +1,4 @@
 
-
 from typing import Dict
 from src.models.sqlite.entities.people import PeopleTable
 from src.models.sqlite.interfaces.people_repository import PeopleRepositoryInterface
@@ -11,6 +10,7 @@ class PersonFinderController:
     
     def find(self, person_id: int) -> Dict:
         person = self.__find_person_in_db(person_id)
+        print(person)
         response = self.__format_response(person)
         return response
     
@@ -28,10 +28,7 @@ class PersonFinderController:
                 "attributes": {
                     "first_name": person.first_name,
                     "last_name": person.last_name,
-                    "pet_name": person.pet_name,
-                    "Pet_type": person.pet_type, 
-                    "age": person.age, 
-                    "pet_id": person.pet_id
-                }
+                    "age": person.age,
+                    "pet_id": person.pet_id                }
             }
         }
